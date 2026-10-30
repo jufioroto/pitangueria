@@ -151,7 +151,7 @@ function Index() {
       {/* ONDE ATUAMOS */}
       <section id="o-que-fazemos" className="relative grid md:grid-cols-2">
         <div className="service-panel flex items-center px-8 py-20 text-primary-foreground md:justify-center">
-          <img src={atuacaoPainel.url} alt="" className="service-art" loading="lazy" />
+          <img src={atuacaoPainel.url} alt="" width={1595} height={1192} className="service-art" />
           <div className="relative z-10 max-w-sm">
             <h2 className="font-display text-lg uppercase">
               Onde <span className="font-bold">atuamos</span>
@@ -200,7 +200,7 @@ function Index() {
             </h2>
           </div>
           <div className="people-panel relative space-y-14 px-8 py-16 text-primary-foreground md:px-12">
-            <img src={pessoasPainel.url} alt="" className="people-art" loading="lazy" />
+            <img src={pessoasPainel.url} alt="" width={1890} height={1800} className="people-art" />
             <article className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-center">
               <img src={ju.url} alt="Ju Fioroto" className="h-28 w-28 shrink-0 rounded-full object-cover" />
               <div>
