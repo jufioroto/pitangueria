@@ -167,12 +167,12 @@ body { font-family: var(--font-sans); }
 .flip-back { transform: rotateY(180deg); }
 .opening-panel { overflow: clip; }
 .opening-art { display: block; width: 100%; height: auto; }
-.service-panel { position: relative; min-height: 35vw; isolation: isolate; }
+.service-panel { position: relative; min-height: 35vw; isolation: isolate; clip-path: inset(-40px 0 0); }
 .service-panel::before { content: ""; position: absolute; inset: 4.5% 0 0; background: var(--brand-dark); z-index: -1; }
-.service-art { position: absolute; top: -4.5%; left: 0; width: 100%; height: auto; pointer-events: none; z-index: -1; }
+.service-art { position: absolute; top: -4.5%; left: 0; width: 100%; height: auto; pointer-events: none; z-index: 0; }
 .people-panel { isolation: isolate; min-height: 53.33vw; }
 .people-panel::before { content: ""; position: absolute; inset: 0 2.9%; background: var(--brand-red); z-index: -1; }
-.people-art { position: absolute; inset: 0 auto auto 0; width: 100%; height: auto; pointer-events: none; z-index: -1; margin: 0; }
+.people-art { position: absolute; inset: 0 auto auto 0; width: 100%; height: auto; pointer-events: none; z-index: 0; margin: 0; }
 .people-section { overflow: clip; }
 .about-layout { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 28px; align-items: start; }
 .about-fruit { width: 96px; height: auto; margin-top: 4px; }
