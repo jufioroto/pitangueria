@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import hero from "@/assets/hero.jpg.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
 import pitanga from "@/assets/pitanga.png.asset.json";
@@ -102,14 +102,21 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
 }
 
 function Index() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const on = () => setScrolled(window.scrollY > 60);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
   return (
-    <main id="topo" className="bg-brand-cream text-foreground">
+    <main id="topo" className="[&_section]:scroll-mt-16 bg-brand-cream text-foreground">
       {/* HERO */}
       <section
         className="relative min-h-[560px] bg-cover bg-center md:min-h-[640px]"
         style={{ backgroundImage: `url(${hero.url})` }}
       >
-        <header className="absolute inset-x-0 top-0 z-10 border-b border-primary-foreground/20">
+        <header className={`fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/20 transition-colors duration-300 ${scrolled ? "bg-brand-red/95 backdrop-blur" : ""}`}>
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <Logo />
             <nav className="hidden gap-12 font-display text-sm font-medium uppercase tracking-[0.25em] text-primary-foreground md:flex">
