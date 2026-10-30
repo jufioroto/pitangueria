@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import hero from "@/assets/hero.jpg.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
-import pitanga from "@/assets/pitanga.png.asset.json";
+import logo from "@/assets/logo.png.asset.json";
+import logoRed from "@/assets/logo-red.png.asset.json";
 import ju from "@/assets/ju.png.asset.json";
 import vitor from "@/assets/vitor.png.asset.json";
 
@@ -26,13 +27,8 @@ export const Route = createFileRoute("/")({
 
 function Logo() {
   return (
-    <a href="#topo" className="flex items-center gap-1 text-primary-foreground" aria-label="Pitangueria">
-      <img src={pitanga.url} alt="" className="h-9 w-9 object-contain brightness-0 invert" />
-      <span className="font-display text-sm font-light uppercase leading-[0.85] tracking-wide">
-        Pitan
-        <br />
-        gueria
-      </span>
+    <a href="#topo" className="flex items-center" aria-label="Pitangueria">
+      <img src={logo.url} alt="Pitangueria" className="h-11 w-auto object-contain" />
     </a>
   );
 }
@@ -134,7 +130,7 @@ function Index() {
       {/* SOBRE */}
       <section id="sobre" className="px-6 py-20">
         <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row sm:gap-8">
-          <img src={pitanga.url} alt="Pitanga" className="h-20 w-20 shrink-0 object-contain drop-shadow-lg" />
+          <img src={logoRed.url} alt="Pitangueria" className="h-16 w-auto shrink-0 object-contain" />
           <div>
             <h2 className="font-display text-xl font-bold uppercase text-brand-red">Pitangueria?...</h2>
             <p className="mt-6 text-[15px] leading-snug">
@@ -247,7 +243,7 @@ function Index() {
       <footer id="contato" className="bg-brand-dark px-6 py-8 text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
-            <img src={pitanga.url} alt="" className="h-12 w-12 object-contain" />
+            <img src={logo.url} alt="Pitangueria" className="h-12 w-auto object-contain" />
             <p className="text-xs tracking-[0.15em] text-primary-foreground/80">
               <a href="mailto:jufioroto@pitangueria.com.br" className="hover:text-primary-foreground">jufioroto@pitangueria.com.br</a>
               <span className="mx-2">|</span>
