@@ -115,7 +115,6 @@ function Index() {
             <a href="#sobre" className="hover:opacity-70">Sobre</a>
             <a href="#o-que-fazemos" className="hover:opacity-70">O que fazemos</a>
             <a href="#pessoas" className="hover:opacity-70">Pessoas</a>
-            <a href="#contato" className="hover:opacity-70">Contato</a>
           </nav>
         </div>
       </header>
