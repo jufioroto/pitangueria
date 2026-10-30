@@ -7,3 +7,7 @@
 - [x] Conferir o resultado no preview
 - [x] Sianinha no tamanho exato da referência
 - [x] Remover Contato do menu
+- [ ] Substituir o ícone do LinkedIn pela arte enviada
+- [ ] Alinhar as quatro sianinhas pelos prints sem reduzir no mobile
+- [ ] Ajustar tamanho e posição da pitanga em Sobre
+- [ ] Conferir os ajustes no computador e no celular
