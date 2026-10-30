@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import hero from "@/assets/hero.jpg.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
 import logo from "@/assets/logo.png.asset.json";
-import logoRed from "@/assets/logo-red.png.asset.json";
+import fruta from "@/assets/fruta.png.asset.json";
 import ju from "@/assets/ju.png.asset.json";
 import vitor from "@/assets/vitor.png.asset.json";
 
@@ -68,24 +68,24 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
       onClick={() => setFlipped((f) => !f)}
       aria-pressed={flipped}
       aria-label={`${c.n} ${c.title.join(" ")} — clique para ver os serviços`}
-      className={`flip group h-[340px] w-full text-left ${flipped ? "is-flipped" : ""}`}
+      className={`flip group h-[300px] w-full text-left ${flipped ? "is-flipped" : ""}`}
     >
       <div className="flip-inner relative h-full w-full">
         <div
-          className={`flip-face absolute inset-0 rounded-2xl ${c.tone} p-7 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)] transition-transform group-hover:-translate-y-1`}
+          className={`flip-face absolute inset-0 rounded-2xl ${c.tone} p-5 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)] transition-transform group-hover:-translate-y-1`}
         >
-          <p className="font-display text-4xl font-light">{c.n}</p>
-          <h3 className="mt-3 font-display text-lg font-medium uppercase leading-tight">
+          <p className="font-display text-3xl font-light">{c.n}</p>
+          <h3 className="mt-2 font-display text-[15px] font-medium uppercase leading-tight">
             {c.title[0]}
             <br />
             {c.title[1]}
           </h3>
-          <p className="mt-5 text-[13px] font-semibold leading-snug">{c.lead}</p>
-          <p className="mt-3 text-[13px] font-light leading-snug opacity-90">{c.body}</p>
+          <p className="mt-5 text-[12px] font-semibold leading-snug">{c.lead}</p>
+          <p className="mt-3 text-[12px] font-light leading-snug opacity-90">{c.body}</p>
           <span className="absolute bottom-4 right-5 text-xl opacity-70 transition-transform group-hover:rotate-180">↻</span>
         </div>
         <div
-          className={`flip-face flip-back absolute inset-0 flex flex-col rounded-2xl ${c.tone} p-7 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)]`}
+          className={`flip-face flip-back absolute inset-0 flex flex-col rounded-2xl ${c.tone} p-5 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)]`}
         >
           <p className="font-display text-4xl font-light">{c.n}</p>
           <p className="mt-4 font-display text-lg font-semibold uppercase">Serviços:</p>
@@ -108,32 +108,29 @@ function Index() {
   return (
     <main id="topo" className="[&_section]:scroll-mt-16 bg-brand-cream text-foreground">
       {/* HERO */}
-      <section
-        className="relative aspect-[4/3] bg-cover bg-center md:aspect-[16/9] md:max-h-[90vh] md:w-full"
-        style={{ backgroundImage: `url(${hero.url})` }}
-      >
-        <header className={`fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/20 transition-colors duration-300 ${scrolled ? "bg-brand-red/95 backdrop-blur" : ""}`}>
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <Logo />
-            <nav className="hidden gap-12 font-display text-sm font-medium uppercase tracking-[0.25em] text-primary-foreground md:flex">
-              <a href="#sobre" className="hover:opacity-70">Sobre</a>
-              <a href="#o-que-fazemos" className="hover:opacity-70">O que fazemos</a>
-              <a href="#pessoas" className="hover:opacity-70">Pessoas</a>
-              <a href="#contato" className="hover:opacity-70">Contato</a>
-            </nav>
-          </div>
-        </header>
+      <header className={`fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/25 transition-colors duration-300 ${scrolled ? "bg-brand-red/95 backdrop-blur" : ""}`}>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 md:px-24">
+          <Logo />
+          <nav className="hidden gap-14 font-display text-[13px] font-medium uppercase tracking-[0.3em] text-primary-foreground md:flex">
+            <a href="#sobre" className="hover:opacity-70">Sobre</a>
+            <a href="#o-que-fazemos" className="hover:opacity-70">O que fazemos</a>
+            <a href="#pessoas" className="hover:opacity-70">Pessoas</a>
+            <a href="#contato" className="hover:opacity-70">Contato</a>
+          </nav>
+        </div>
+      </header>
+      <section className="relative aspect-[5/3] w-full bg-cover bg-center" style={{ backgroundImage: `url(${hero.url})` }}>
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
-        <div className="flowers-x absolute bottom-0 right-0 w-2/3" />
+        <div className="flowers-x absolute bottom-0 right-0 h-[18px] w-[68%] md:h-[30px]" />
       </section>
 
       {/* SOBRE */}
-      <section id="sobre" className="px-6 py-20">
-        <div className="mx-auto flex max-w-3xl flex-col gap-6 sm:flex-row sm:gap-8">
-          <img src={logoRed.url} alt="Pitangueria" className="h-16 w-auto shrink-0 object-contain" />
+      <section id="sobre" className="px-6 py-16 md:py-24">
+        <div className="mx-auto flex max-w-[640px] flex-col gap-6 sm:flex-row sm:gap-6">
+          <img src={fruta.url} alt="Pitanga" className="h-20 w-auto shrink-0 object-contain drop-shadow-lg" />
           <div>
-            <h2 className="font-display text-xl font-bold uppercase text-brand-red">Pitangueria?...</h2>
-            <p className="mt-6 text-[15px] leading-snug">
+            <h2 className="font-display text-lg font-semibold uppercase text-brand-red">Pitangueria?...</h2>
+            <p className="mt-5 text-[14px] leading-snug">
               No Pitangueria, design nunca é só design. Somos um estúdio criativo que une estratégia,
               cultura e repertório para transformar desafios de negócio em ideias relevantes,
               experiências desejáveis e sistemas visuais conectados à marca, ao público e ao contexto.
@@ -150,7 +147,7 @@ function Index() {
 
       {/* ONDE ATUAMOS */}
       <section id="o-que-fazemos" className="relative grid md:grid-cols-2">
-        <div className="flowers-x absolute left-0 top-0 w-1/2" />
+        <div className="flowers-x absolute left-0 top-0 z-10 h-[18px] w-1/2 md:h-[30px]" />
         <div className="flex items-center bg-brand-dark px-8 py-20 text-primary-foreground md:justify-center">
           <div className="max-w-sm">
             <h2 className="font-display text-lg uppercase">
@@ -166,8 +163,8 @@ function Index() {
           </div>
         </div>
         <div className="relative flex items-center bg-cover bg-center px-10 py-20" style={{ backgroundImage: `url(${pitangas.url})` }}>
-          <div className="absolute inset-0 bg-primary/80" />
-          <p className="relative max-w-md font-display text-2xl font-light leading-snug text-primary-foreground md:text-3xl">
+          <div className="absolute inset-0 bg-primary/85" />
+          <p className="relative max-w-md font-display text-2xl font-light leading-snug text-primary-foreground md:text-[28px]">
             Marcas precisam ser reconhecíveis, mas também adaptáveis. Elas mudam de contexto, de público
             e de linguagem o tempo todo.
           </p>
@@ -176,7 +173,7 @@ function Index() {
 
       {/* CARDS */}
       <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-4xl gap-4 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[590px] gap-3 md:grid-cols-3">
           {cards.map((c) => (
             <FlipCard key={c.n} c={c} />
           ))}
@@ -243,7 +240,7 @@ function Index() {
       <footer id="contato" className="bg-brand-dark px-6 py-8 text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
-            <img src={logo.url} alt="Pitangueria" className="h-12 w-auto object-contain" />
+            <img src={fruta.url} alt="Pitangueria" className="h-12 w-auto object-contain" />
             <p className="text-xs tracking-[0.15em] text-primary-foreground/80">
               <a href="mailto:jufioroto@pitangueria.com.br" className="hover:text-primary-foreground">jufioroto@pitangueria.com.br</a>
               <span className="mx-2">|</span>
