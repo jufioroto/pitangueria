@@ -72,7 +72,7 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
       onClick={() => setFlipped((f) => !f)}
       aria-pressed={flipped}
       aria-label={`${c.n} ${c.title.join(" ")} — clique para ver os serviços`}
-      className={`flip group h-[300px] w-full text-left ${flipped ? "is-flipped" : ""}`}
+      className={`flip group h-[340px] w-full text-left ${flipped ? "is-flipped" : ""}`}
     >
       <div className="flip-inner relative h-full w-full">
         <div
@@ -113,7 +113,7 @@ function Index() {
     <main id="topo" className="[&_section]:scroll-mt-16 bg-brand-cream text-foreground">
       {/* HERO */}
       <section
-        className="relative min-h-[560px] bg-cover bg-center md:min-h-[640px]"
+        className="relative aspect-[4/3] bg-cover bg-center md:aspect-[16/9] md:max-h-[90vh] md:w-full"
         style={{ backgroundImage: `url(${hero.url})` }}
       >
         <header className={`fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/20 transition-colors duration-300 ${scrolled ? "bg-brand-red/95 backdrop-blur" : ""}`}>
@@ -127,19 +127,7 @@ function Index() {
             </nav>
           </div>
         </header>
-        <div className="mx-auto max-w-6xl px-6 pt-36 md:pt-40">
-          <div className="max-w-xl rounded-3xl border border-primary-foreground/25 px-8 py-10 md:ml-20 md:px-12">
-            <h1 className="font-display text-4xl font-light uppercase leading-[1.15] tracking-[0.12em] text-primary-foreground md:text-5xl">
-              Design,
-              <br />
-              estratégia e
-              <br />
-              <span className="font-semibold">Malemolência</span>
-              <br />
-              <span className="font-semibold">criativa</span>
-            </h1>
-          </div>
-        </div>
+        <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
         <div className="flowers-x absolute bottom-0 right-0 w-2/3 translate-y-1/2" />
       </section>
 
