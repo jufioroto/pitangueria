@@ -92,8 +92,8 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
           className={`flip-face flip-back absolute inset-0 flex flex-col rounded-2xl ${c.tone} p-7 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)]`}
         >
           <p className="font-display text-4xl font-light">{c.n}</p>
-          <p className="mt-6 font-display text-lg font-semibold uppercase">Serviços:</p>
-          <p className="mt-3 text-[15px] font-light leading-relaxed">{c.back}</p>
+          <p className="mt-4 font-display text-lg font-semibold uppercase">Serviços:</p>
+          <p className="mt-3 text-[14px] font-light leading-snug">{c.back}</p>
           <span className="absolute bottom-4 right-5 text-xl opacity-70">↺</span>
         </div>
       </div>
