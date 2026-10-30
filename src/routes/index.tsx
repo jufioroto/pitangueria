@@ -121,7 +121,7 @@ function Index() {
       </header>
       <section className="relative aspect-[5/3] w-full bg-cover bg-center" style={{ backgroundImage: `url(${hero.url})` }}>
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
-        <div className="flowers-x absolute bottom-0 right-0 h-[18px] w-[68%] md:h-[30px]" />
+        <div className="flowers-x absolute bottom-0 right-0 h-[2.3vw] w-[68%]" />
       </section>
 
       {/* SOBRE */}
@@ -147,7 +147,7 @@ function Index() {
 
       {/* ONDE ATUAMOS */}
       <section id="o-que-fazemos" className="relative grid md:grid-cols-2">
-        <div className="flowers-x absolute left-0 top-0 z-10 h-[18px] w-1/2 md:h-[30px]" />
+        <div className="flowers-x absolute left-0 top-0 z-10 h-[2.3vw] w-1/2" />
         <div className="flex items-center bg-brand-dark px-8 py-20 text-primary-foreground md:justify-center">
           <div className="max-w-sm">
             <h2 className="font-display text-lg uppercase">
@@ -185,20 +185,20 @@ function Index() {
 
       {/* PESSOAS */}
       <section id="pessoas" className="relative bg-cover bg-center" style={{ backgroundImage: `url(${pitangas.url})` }}>
-        <div className="absolute inset-0 bg-brand-red/85" />
-        <div className="relative mx-auto grid max-w-6xl md:grid-cols-[1fr_2fr]">
-          <div className="relative flex items-end px-8 py-16 md:py-24">
-            <h2 className="font-display text-3xl uppercase leading-tight text-primary-foreground">
-              <span className="font-bold">Quem</span>
+        <div className="absolute inset-0 bg-brand-red/80" />
+        <div className="relative grid md:grid-cols-[34%_56%_10%]">
+          <div className="relative flex items-center px-8 py-16 md:justify-end md:pr-[5vw]">
+            <h2 className="font-display text-3xl uppercase leading-tight text-primary-foreground md:text-[2.6vw]">
+              <span className="font-semibold">Quem</span>
               <br />
-              <span className="font-bold">cria</span> no
+              <span className="font-semibold">cria</span> no
               <br />
               Pitangueria
             </h2>
-            <div className="flowers-y absolute bottom-0 right-0 hidden h-1/2 translate-x-1/2 md:block" />
+            <div className="flowers-y absolute bottom-0 right-0 hidden h-[56%] w-[3.4vw] translate-x-1/2 md:block" />
           </div>
           <div className="relative space-y-14 bg-brand-red px-8 py-16 text-primary-foreground md:px-12">
-            <div className="flowers-y absolute right-0 top-0 hidden h-1/3 translate-x-1/2 md:block" />
+            <div className="flowers-y absolute right-0 top-0 hidden h-1/2 w-[3.4vw] translate-x-1/2 md:block" />
             <article className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <img src={ju.url} alt="Ju Fioroto" className="h-28 w-28 shrink-0 rounded-full object-cover" />
               <div>
