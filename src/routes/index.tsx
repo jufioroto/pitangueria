@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Linkedin } from "lucide-react";
 import hero from "@/assets/hero.jpg.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
 import logo from "@/assets/logo.png.asset.json";
@@ -246,9 +247,20 @@ function Index() {
               <a href="mailto:vitor@pitangueria.com.br" className="hover:text-primary-foreground">vitor@pitangueria.com.br</a>
             </p>
           </div>
-          <p className="font-display text-xs uppercase">
-            <span className="font-bold">© 2026</span> Estúdio Pitangueria
-          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/company/pitangueria"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn do Pitangueria"
+              className="text-primary-foreground transition-opacity hover:opacity-70"
+            >
+              <Linkedin size={22} strokeWidth={1.75} />
+            </a>
+            <p className="font-display text-xs uppercase">
+              <span className="font-bold">© 2026</span> Estúdio Pitangueria
+            </p>
+          </div>
         </div>
       </footer>
     </main>
