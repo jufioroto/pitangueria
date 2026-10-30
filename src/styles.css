@@ -172,15 +172,15 @@ body { font-family: var(--font-sans); }
 .flowers-people-left { bottom: 0; right: -29px; height: 56%; }
 .flowers-people-right { top: 0; right: -29px; height: 54%; }
 .people-section { overflow: clip; }
-.about-layout { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 24px; align-items: start; }
-.about-fruit { width: 80px; height: auto; margin-top: 4px; }
+.about-layout { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 28px; align-items: start; }
+.about-fruit { width: 96px; height: auto; margin-top: 4px; }
 @media (max-width: 767px) {
   .flowers-services { width: 100%; }
   .flowers-people-left { right: auto; left: -29px; height: 100%; }
   .flowers-people-right { height: 54%; }
 }
 @media (max-width: 479px) {
-  .about-layout { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; }
+  .about-layout { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
 }
 :root {
   --sianinha-size: 58px;

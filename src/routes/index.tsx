@@ -127,7 +127,7 @@ function Index() {
 
       {/* SOBRE */}
       <section id="sobre" className="px-6 py-16 md:py-24">
-        <div className="about-layout mx-auto max-w-[640px]">
+        <div className="about-layout mx-auto max-w-[714px]">
           <img src={frutaRecortada.url} alt="Pitanga" className="about-fruit" />
           <div>
             <h2 className="font-display text-lg font-semibold uppercase text-brand-red">Pitangueria?...</h2>
