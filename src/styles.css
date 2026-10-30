@@ -165,9 +165,25 @@ body { font-family: var(--font-sans); }
 .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
 .flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .flip-back { transform: rotateY(180deg); }
-.flowers-x { background-image: var(--flower-x); background-repeat: repeat-x; background-size: auto 100%; }
-.flowers-y { background-image: var(--flower-y); background-repeat: repeat-y; background-size: 100% auto; }
+.flowers-x { position: absolute; height: var(--sianinha-size); background-image: var(--flower-x); background-repeat: repeat-x; background-size: 1091px 58px; pointer-events: none; z-index: 10; }
+.flowers-y { position: absolute; width: var(--sianinha-size); background-image: var(--flower-y); background-repeat: repeat-y; background-size: 58px 1091px; pointer-events: none; z-index: 10; }
+.flowers-hero { bottom: -29px; left: 32%; right: 0; }
+.flowers-services { top: -29px; left: 0; width: 50%; }
+.flowers-people-left { bottom: 0; right: -29px; height: 56%; }
+.flowers-people-right { top: 0; right: -29px; height: 54%; }
+.people-section { overflow: clip; }
+.about-layout { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 24px; align-items: start; }
+.about-fruit { width: 80px; height: auto; margin-top: 4px; }
+@media (max-width: 767px) {
+  .flowers-services { width: 100%; }
+  .flowers-people-left { right: auto; left: -29px; height: 100%; }
+  .flowers-people-right { height: 54%; }
+}
+@media (max-width: 479px) {
+  .about-layout { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; }
+}
 :root {
+  --sianinha-size: 58px;
   --flower-x: url("/__l5e/assets-v1/5c3cb7cf-5ca1-405a-92f3-34f188a08aaf/flores.png");
   --flower-y: url("/__l5e/assets-v1/960df836-51c1-4f81-8334-d54bff27cd62/flores-y.png");
 }

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Linkedin } from "lucide-react";
+import linkedin from "@/assets/linkedin.png.asset.json";
+import frutaRecortada from "@/assets/fruta-recortada.png.asset.json";
 import hero from "@/assets/hero.jpg.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
 import logo from "@/assets/logo.png.asset.json";
@@ -121,13 +122,13 @@ function Index() {
       </header>
       <section className="relative aspect-[5/3] w-full bg-cover bg-center" style={{ backgroundImage: `url(${hero.url})` }}>
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
-        <div className="flowers-x absolute bottom-0 right-0 h-[2.3vw] w-[68%]" />
+        <div aria-hidden="true" className="flowers-x flowers-hero" />
       </section>
 
       {/* SOBRE */}
       <section id="sobre" className="px-6 py-16 md:py-24">
-        <div className="mx-auto flex max-w-[640px] flex-col gap-6 sm:flex-row sm:gap-6">
-          <img src={fruta.url} alt="Pitanga" className="h-20 w-auto shrink-0 object-contain drop-shadow-lg" />
+        <div className="about-layout mx-auto max-w-[640px]">
+          <img src={frutaRecortada.url} alt="Pitanga" className="about-fruit" />
           <div>
             <h2 className="font-display text-lg font-semibold uppercase text-brand-red">Pitangueria?...</h2>
             <p className="mt-5 text-[14px] leading-snug">
@@ -147,7 +148,7 @@ function Index() {
 
       {/* ONDE ATUAMOS */}
       <section id="o-que-fazemos" className="relative grid md:grid-cols-2">
-        <div className="flowers-x absolute left-0 top-0 z-10 h-[2.3vw] w-1/2" />
+        <div aria-hidden="true" className="flowers-x flowers-services" />
         <div className="flex items-center bg-brand-dark px-8 py-20 text-primary-foreground md:justify-center">
           <div className="max-w-sm">
             <h2 className="font-display text-lg uppercase">
@@ -184,7 +185,7 @@ function Index() {
       </section>
 
       {/* PESSOAS */}
-      <section id="pessoas" className="relative bg-cover bg-center" style={{ backgroundImage: `url(${pitangas.url})` }}>
+      <section id="pessoas" className="people-section relative bg-cover bg-center" style={{ backgroundImage: `url(${pitangas.url})` }}>
         <div className="absolute inset-0 bg-brand-red/80" />
         <div className="relative grid md:grid-cols-[34%_56%_10%]">
           <div className="relative flex items-center px-8 py-16 md:justify-end md:pr-[5vw]">
@@ -195,10 +196,10 @@ function Index() {
               <br />
               Pitangueria
             </h2>
-            <div className="flowers-y absolute bottom-0 -right-[1vw] hidden h-[56%] w-[3.4vw] md:block" />
+            <div aria-hidden="true" className="flowers-y flowers-people-left" />
           </div>
           <div className="relative space-y-14 bg-brand-red px-8 py-16 text-primary-foreground md:px-12">
-            <div className="flowers-y absolute right-0 top-0 hidden h-1/2 w-[3.4vw] md:block" />
+            <div aria-hidden="true" className="flowers-y flowers-people-right" />
             <article className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <img src={ju.url} alt="Ju Fioroto" className="h-28 w-28 shrink-0 rounded-full object-cover" />
               <div>
@@ -255,7 +256,7 @@ function Index() {
               aria-label="LinkedIn do Pitangueria"
               className="text-primary-foreground transition-opacity hover:opacity-70"
             >
-              <Linkedin size={22} strokeWidth={1.75} />
+              <img src={linkedin.url} alt="" className="h-7 w-7 object-contain" />
             </a>
             <p className="font-display text-xs uppercase">
               <span className="font-bold">© 2026</span> Estúdio Pitangueria
