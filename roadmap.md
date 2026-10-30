@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] Aplicar os novos PNGs compostos mantendo proporções, com redução no celular e tamanho mantido no tablet
+- [x] Conferir as novas imagens no computador, tablet e celular
+
 - [x] Trocar o logo do site pelo logo correto anexado (topo, seção "Sobre", rodapé)
 - [x] Definir o favicon a partir do novo logo
 - [x] Substituir a decoração de "flores" pelo desenho novo anexado (sianinha.png)
