@@ -124,7 +124,7 @@ function Index() {
           </div>
         </header>
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
-        <div className="flowers-x absolute bottom-0 right-0 w-2/3 translate-y-1/2" />
+        <div className="flowers-x absolute bottom-0 right-0 w-2/3" />
       </section>
 
       {/* SOBRE */}
@@ -150,7 +150,7 @@ function Index() {
 
       {/* ONDE ATUAMOS */}
       <section id="o-que-fazemos" className="relative grid md:grid-cols-2">
-        <div className="flowers-x absolute left-0 top-0 w-1/2 -translate-y-1/2" />
+        <div className="flowers-x absolute left-0 top-0 w-1/2" />
         <div className="flex items-center bg-brand-dark px-8 py-20 text-primary-foreground md:justify-center">
           <div className="max-w-sm">
             <h2 className="font-display text-lg uppercase">
