@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import linkedin from "@/assets/linkedin.png.asset.json";
 import frutaRecortada from "@/assets/fruta-recortada.png.asset.json";
-import hero from "@/assets/hero.jpg.asset.json";
+import aberturaPainel from "@/assets/abertura-painel.png.asset.json";
+import atuacaoPainel from "@/assets/atuacao-painel.png.asset.json";
+import pessoasPainel from "@/assets/pessoas-painel.png.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
 import logo from "@/assets/logo.png.asset.json";
 import fruta from "@/assets/fruta.png.asset.json";
@@ -120,9 +122,9 @@ function Index() {
           </nav>
         </div>
       </header>
-      <section className="relative aspect-[5/3] w-full bg-cover bg-center" style={{ backgroundImage: `url(${hero.url})` }}>
+      <section className="opening-panel relative w-full">
+        <img src={aberturaPainel.url} alt="" className="opening-art" fetchPriority="high" />
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
-        <div aria-hidden="true" className="flowers-x flowers-hero" />
       </section>
 
       {/* SOBRE */}
@@ -148,9 +150,9 @@ function Index() {
 
       {/* ONDE ATUAMOS */}
       <section id="o-que-fazemos" className="relative grid md:grid-cols-2">
-        <div aria-hidden="true" className="flowers-x flowers-services" />
-        <div className="flex items-center bg-brand-dark px-8 py-20 text-primary-foreground md:justify-center">
-          <div className="max-w-sm">
+        <div className="service-panel flex items-center px-8 py-20 text-primary-foreground md:justify-center">
+          <img src={atuacaoPainel.url} alt="" className="service-art" loading="lazy" />
+          <div className="relative z-10 max-w-sm">
             <h2 className="font-display text-lg uppercase">
               Onde <span className="font-bold">atuamos</span>
             </h2>
@@ -196,11 +198,10 @@ function Index() {
               <br />
               Pitangueria
             </h2>
-            <div aria-hidden="true" className="flowers-y flowers-people-left" />
           </div>
-          <div className="relative space-y-14 bg-brand-red px-8 py-16 text-primary-foreground md:px-12">
-            <div aria-hidden="true" className="flowers-y flowers-people-right" />
-            <article className="flex flex-col gap-6 sm:flex-row sm:items-center">
+          <div className="people-panel relative space-y-14 px-8 py-16 text-primary-foreground md:px-12">
+            <img src={pessoasPainel.url} alt="" className="people-art" loading="lazy" />
+            <article className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-center">
               <img src={ju.url} alt="Ju Fioroto" className="h-28 w-28 shrink-0 rounded-full object-cover" />
               <div>
                 <h3 className="font-display text-lg uppercase">
@@ -216,7 +217,7 @@ function Index() {
                 </p>
               </div>
             </article>
-            <article className="flex flex-col-reverse gap-6 sm:flex-row sm:items-center">
+            <article className="relative z-10 flex flex-col-reverse gap-6 sm:flex-row sm:items-center">
               <div>
                 <h3 className="font-display text-lg uppercase">
                   Vitor <span className="font-bold">Balan</span>

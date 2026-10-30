@@ -165,25 +165,26 @@ body { font-family: var(--font-sans); }
 .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
 .flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .flip-back { transform: rotateY(180deg); }
-.flowers-x { position: absolute; height: var(--sianinha-size); background-image: var(--flower-x); background-repeat: repeat-x; background-size: 1091px 58px; pointer-events: none; z-index: 10; }
-.flowers-y { position: absolute; width: var(--sianinha-size); background-image: var(--flower-y); background-repeat: repeat-y; background-size: 58px 1091px; pointer-events: none; z-index: 10; }
-.flowers-hero { bottom: -29px; left: 32%; right: 0; }
-.flowers-services { top: -29px; left: 0; width: 50%; }
-.flowers-people-left { bottom: 0; right: -29px; height: 56%; }
-.flowers-people-right { top: 0; right: -29px; height: 54%; }
+.opening-panel { overflow: clip; }
+.opening-art { display: block; width: 100%; height: auto; }
+.service-panel { position: relative; min-height: 35vw; isolation: isolate; }
+.service-panel::before { content: ""; position: absolute; inset: 4.5% 0 0; background: var(--brand-dark); z-index: -1; }
+.service-art { position: absolute; top: -4.5%; left: 0; width: 100%; height: auto; pointer-events: none; z-index: -1; }
+.people-panel { isolation: isolate; min-height: 53.33vw; }
+.people-panel::before { content: ""; position: absolute; inset: 0 2.9%; background: var(--brand-red); z-index: -1; }
+.people-art { position: absolute; inset: 0 auto auto 0; width: 100%; height: auto; pointer-events: none; z-index: -1; margin: 0; }
 .people-section { overflow: clip; }
 .about-layout { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 28px; align-items: start; }
 .about-fruit { width: 96px; height: auto; margin-top: 4px; }
+@media (min-width: 640px) and (max-width: 1023px) {
+  .opening-art { width: 1024px; max-width: none; margin-left: calc((100% - 1024px) / 2); }
+  .service-art { width: 512px; max-width: none; }
+  .people-art { width: 574px; max-width: none; }
+}
 @media (max-width: 767px) {
-  .flowers-services { width: 100%; }
-  .flowers-people-left { right: auto; left: -29px; height: 100%; }
-  .flowers-people-right { height: 54%; }
+  .service-panel { min-height: 65vw; }
+  .people-panel { min-height: 95.24vw; }
 }
 @media (max-width: 479px) {
   .about-layout { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
-}
-:root {
-  --sianinha-size: 58px;
-  --flower-x: url("/__l5e/assets-v1/5c3cb7cf-5ca1-405a-92f3-34f188a08aaf/flores.png");
-  --flower-y: url("/__l5e/assets-v1/960df836-51c1-4f81-8334-d54bff27cd62/flores-y.png");
 }
