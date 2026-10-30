@@ -68,7 +68,7 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
       onClick={() => setFlipped((f) => !f)}
       aria-pressed={flipped}
       aria-label={`${c.n} ${c.title.join(" ")} — clique para ver os serviços`}
-      className={`flip group h-[300px] w-full text-left ${flipped ? "is-flipped" : ""}`}
+      className={`flip group h-[330px] w-full text-left ${flipped ? "is-flipped" : ""}`}
     >
       <div className="flip-inner relative h-full w-full">
         <div
@@ -195,10 +195,10 @@ function Index() {
               <br />
               Pitangueria
             </h2>
-            <div className="flowers-y absolute bottom-0 right-0 hidden h-[56%] w-[3.4vw] translate-x-1/2 md:block" />
+            <div className="flowers-y absolute bottom-0 -right-[1vw] hidden h-[56%] w-[3.4vw] md:block" />
           </div>
           <div className="relative space-y-14 bg-brand-red px-8 py-16 text-primary-foreground md:px-12">
-            <div className="flowers-y absolute right-0 top-0 hidden h-1/2 w-[3.4vw] translate-x-1/2 md:block" />
+            <div className="flowers-y absolute right-0 top-0 hidden h-1/2 w-[3.4vw] md:block" />
             <article className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <img src={ju.url} alt="Ju Fioroto" className="h-28 w-28 shrink-0 rounded-full object-cover" />
               <div>

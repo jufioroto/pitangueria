@@ -165,8 +165,8 @@ body { font-family: var(--font-sans); }
 .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
 .flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .flip-back { transform: rotateY(180deg); }
-.flowers-x { background-image: var(--flower-x); background-repeat: repeat-x; background-size: auto 100%; height: 58px; }
-.flowers-y { background-image: var(--flower-y); background-repeat: repeat-y; background-size: 100% auto; width: 58px; }
+.flowers-x { background-image: var(--flower-x); background-repeat: repeat-x; background-size: auto 100%; }
+.flowers-y { background-image: var(--flower-y); background-repeat: repeat-y; background-size: 100% auto; }
 :root {
   --flower-x: url("/__l5e/assets-v1/5c3cb7cf-5ca1-405a-92f3-34f188a08aaf/flores.png");
   --flower-y: url("/__l5e/assets-v1/960df836-51c1-4f81-8334-d54bff27cd62/flores-y.png");
