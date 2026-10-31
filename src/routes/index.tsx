@@ -2,16 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import linkedin from "@/assets/linkedin.png.asset.json";
-import frutaRecortada from "@/assets/fruta-recortada.png.asset.json";
+import linkedinSrc from "@/assets/linkedin.png";
+const linkedin = { url: linkedinSrc };
+import frutaRecortadaSrc from "@/assets/fruta-recortada.png";
+const frutaRecortada = { url: frutaRecortadaSrc };
 import aberturaMenor from "@/assets/abertura-menor.png";
-import atuacaoPainel from "@/assets/atuacao-painel.png.asset.json";
-import pessoasPainel from "@/assets/pessoas-painel.png.asset.json";
-import pitangas from "@/assets/pitangas.jpg.asset.json";
-import logo from "@/assets/logo.png.asset.json";
-import fruta from "@/assets/fruta.png.asset.json";
-import ju from "@/assets/ju.png.asset.json";
-import vitor from "@/assets/vitor.png.asset.json";
+import atuacaoPainelSrc from "@/assets/atuacao-painel.png";
+const atuacaoPainel = { url: atuacaoPainelSrc };
+import pessoasPainelSrc from "@/assets/pessoas-painel.png";
+const pessoasPainel = { url: pessoasPainelSrc };
+import pitangasSrc from "@/assets/pitangas.jpg";
+const pitangas = { url: pitangasSrc };
+import logoSrc from "@/assets/logo.png";
+const logo = { url: logoSrc };
+import frutaSrc from "@/assets/fruta.png";
+const fruta = { url: frutaSrc };
+import juSrc from "@/assets/ju.png";
+const ju = { url: juSrc };
+import vitorSrc from "@/assets/vitor.png";
+const vitor = { url: vitorSrc };
 
 export const Route = createFileRoute("/")({
   head: () => ({
