@@ -218,7 +218,7 @@ function Index() {
 
       {/* CARDS */}
       <section className="cards-section px-6">
-        <div className="mx-auto grid max-w-[590px] gap-3 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[280px] gap-3 md:max-w-[590px] md:grid-cols-3">
           {cards.map((c) => (
             <FlipCard key={c.n} c={c} />
           ))}
