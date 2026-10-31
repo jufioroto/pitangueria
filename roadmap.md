@@ -20,4 +20,4 @@
 - [x] Alinhar as quatro sianinhas pelos prints sem reduzir no mobile
 - [x] Ajustar tamanho e posição da pitanga em Sobre
 - [x] Conferir os ajustes no computador e no celular
-- [ ] Mobile: titulo "Quem cria no Pitangueria" em uma linha so (manter quebras no desktop)
+- [x] Mobile: titulo "Quem cria no Pitangueria" em uma linha so (manter quebras no desktop)
