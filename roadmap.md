@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Corrigir o deslocamento do PNG de Pessoas sem mover textos e fotos
+
 - [x] Ampliar o PNG de Pessoas até sob o rodapé e alinhar o PNG de Onde atuamos
 - [x] Reduzir o LinkedIn para 65%, afastar do copyright e aplicar texto 11px light
 - [x] Conferir os ajustes na página
