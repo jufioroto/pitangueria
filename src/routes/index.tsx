@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import linkedin from "@/assets/linkedin.png.asset.json";
 import frutaRecortada from "@/assets/fruta-recortada.png.asset.json";
 import aberturaPainel from "@/assets/abertura-painel.png.asset.json";
@@ -67,15 +68,27 @@ const cards = [
 function FlipCard({ c }: { c: (typeof cards)[number] }) {
   const [flipped, setFlipped] = useState(false);
   return (
-    <button
+    <Button
       type="button"
-      onClick={() => setFlipped((f) => !f)}
+      variant="ghost"
+      onPointerEnter={(event) => {
+        if (event.pointerType === "mouse") setFlipped(true);
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType === "mouse") setFlipped(false);
+      }}
+      onBlur={() => setFlipped(false)}
+      onClick={(event) => {
+        if (event.detail > 0 && window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+        setFlipped((f) => !f);
+      }}
       aria-pressed={flipped}
-      aria-label={`${c.n} ${c.title.join(" ")} — clique para ver os serviços`}
-      className={`flip group h-[330px] w-full text-left ${flipped ? "is-flipped" : ""}`}
+      aria-label={`${c.n} ${c.title.join(" ")}`}
+      className={`flip group block h-[330px] w-full whitespace-normal rounded-none p-0 text-left font-normal hover:bg-transparent ${flipped ? "is-flipped" : ""}`}
     >
       <div className="flip-inner relative h-full w-full">
         <div
+          aria-hidden={flipped}
           className={`flip-face absolute inset-0 rounded-2xl ${c.tone} p-5 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)] transition-transform group-hover:-translate-y-1`}
         >
           <p className="font-display text-3xl font-light">{c.n}</p>
@@ -89,6 +102,7 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
           <span className="absolute bottom-4 right-5 text-xl opacity-70 transition-transform group-hover:rotate-180">↻</span>
         </div>
         <div
+          aria-hidden={!flipped}
           className={`flip-face flip-back absolute inset-0 flex flex-col rounded-2xl ${c.tone} p-5 text-primary-foreground shadow-[0_6px_14px_-6px_rgba(0,0,0,0.35)]`}
         >
           <p className="font-display text-4xl font-light">{c.n}</p>
@@ -97,7 +111,7 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
           <span className="absolute bottom-4 right-5 text-xl opacity-70">↺</span>
         </div>
       </div>
-    </button>
+    </Button>
   );
 }
 
@@ -181,9 +195,6 @@ function Index() {
             <FlipCard key={c.n} c={c} />
           ))}
         </div>
-        <p className="mt-6 text-center text-xs uppercase tracking-[0.2em] text-foreground/50">
-          Clique nos cards para ver os serviços
-        </p>
       </section>
 
       {/* PESSOAS */}
