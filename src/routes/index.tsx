@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import linkedin from "@/assets/linkedin.png.asset.json";
 import frutaRecortada from "@/assets/fruta-recortada.png.asset.json";
-import aberturaPainel from "@/assets/abertura-painel.png.asset.json";
+import aberturaMenor from "@/assets/abertura-menor.png";
 import atuacaoPainel from "@/assets/atuacao-painel.png.asset.json";
 import pessoasPainel from "@/assets/pessoas-painel.png.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
@@ -117,16 +118,25 @@ function FlipCard({ c }: { c: (typeof cards)[number] }) {
 
 function Index() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 60);
     on();
     window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
   }, []);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
   return (
     <main id="topo" className="[&_section]:scroll-mt-16 bg-brand-cream text-foreground">
       {/* HERO */}
-      <header className={`fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/25 transition-colors duration-300 ${scrolled ? "bg-brand-red/95 backdrop-blur" : ""}`}>
+      <header className={`fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/25 transition-colors duration-300 ${scrolled || menuOpen ? "bg-brand-red/95 backdrop-blur" : ""}`}>
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 md:px-24">
           <Logo />
           <nav className="hidden gap-14 font-display text-[13px] font-medium uppercase tracking-[0.3em] text-primary-foreground md:flex">
@@ -134,10 +144,28 @@ function Index() {
             <a href="#o-que-fazemos" className="hover:opacity-70">O que fazemos</a>
             <a href="#pessoas" className="hover:opacity-70">Pessoas</a>
           </nav>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground md:hidden"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </Button>
         </div>
+        {menuOpen && (
+          <nav id="mobile-menu" aria-label="Menu principal" className="flex flex-col gap-5 border-t border-primary-foreground/25 px-6 py-6 font-display text-sm font-medium uppercase text-primary-foreground md:hidden">
+            <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre</a>
+            <a href="#o-que-fazemos" onClick={() => setMenuOpen(false)}>O que fazemos</a>
+            <a href="#pessoas" onClick={() => setMenuOpen(false)}>Pessoas</a>
+          </nav>
+        )}
       </header>
       <section className="opening-panel relative w-full">
-        <img src={aberturaPainel.url} alt="" className="opening-art" fetchPriority="high" />
+        <img src={aberturaMenor} alt="" className="opening-art" fetchPriority="high" />
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
       </section>
 
@@ -189,7 +217,7 @@ function Index() {
       </section>
 
       {/* CARDS */}
-      <section className="px-6 py-20">
+      <section className="cards-section px-6">
         <div className="mx-auto grid max-w-[590px] gap-3 md:grid-cols-3">
           {cards.map((c) => (
             <FlipCard key={c.n} c={c} />
@@ -227,18 +255,19 @@ function Index() {
               </div>
             </article>
             <article className="relative z-10 flex flex-col-reverse gap-6 sm:flex-row sm:items-center">
-              <div>
+              <div className="vitor-copy">
                 <h3 className="font-display text-lg uppercase">
                   Vitor <span className="font-bold">Balan</span>
                 </h3>
                 <p className="mt-4 text-[13px] font-light leading-snug">
-                  Relações-públicas formado pela Cásper Líbero, com especialização em ESG pelo Senac,
-                  formação no curso “Objetivos de Desenvolvimento Sustentável (ODS) e alterações
-                  climáticas” da Fundação das Nações Unidas (ONU) e certificações da GRI e IFRS
-                  Foundation. Atua há quase 15 anos em comunicação corporativa com ênfase em
-                  sustentabilidade. Entre as marcas atendidas, destacam-se Raízen, Cosan, EDP Brasil,
-                  Lojas Renner, Dexco, Movida, Fundação Bradesco, Embraer, Telefônica Vivo, Arteris,
-                  Cargill e outras.
+                  Vitor Balan trabalha há mais de uma década com comunicação corporativa e produção
+                  de conteúdo. Formado em Relações Públicas pela Faculdade Cásper Líbero, desenvolveu
+                  projetos para empresas e instituições como Raízen, Warner, Grupo Renault,
+                  Kimberly-Clark, Embraer, Fundação Bradesco, Lojas Renner e Telefônica Vivo, entre
+                  outras. Seu trabalho envolve escuta, apuração e sensibilidade editorial para
+                  transformar assuntos complexos em narrativas acessíveis e relevantes. A atenção
+                  às palavras e ao contexto de cada cliente orienta seu olhar para projetos que
+                  ajudam empresas a contar suas histórias e dialogar com diferentes públicos.
                 </p>
               </div>
               <img src={vitor.url} alt="Vitor Balan" className="h-28 w-28 shrink-0 rounded-full object-cover grayscale" />

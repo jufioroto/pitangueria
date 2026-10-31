@@ -1,5 +1,13 @@
 # Roadmap
 
+- [x] Substituir a apresentação de Vitor pelo novo texto enviado
+
+- [x] Reduzir a imagem de abertura sem distorcer e conferir as laterais
+- [x] Adicionar menu hambúrguer no celular
+- [x] Aplicar sombra na pitanga de Sobre
+- [x] Reduzir em 10% o espaço acima e abaixo dos cartões
+- [x] Afastar o texto de Vitor da sianinha e conferir a página
+
 - [x] Corrigir o deslocamento do PNG de Pessoas sem mover textos e fotos
 
 - [x] Ampliar o PNG de Pessoas até sob o rodapé e alinhar o PNG de Onde atuamos
