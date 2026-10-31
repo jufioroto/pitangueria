@@ -1,8 +1,8 @@
 # Roadmap
 
-- [ ] Ampliar o PNG de Pessoas até sob o rodapé e alinhar o PNG de Onde atuamos
-- [ ] Reduzir o LinkedIn para 65%, afastar do copyright e aplicar texto 11px light
-- [ ] Conferir os ajustes na página
+- [x] Ampliar o PNG de Pessoas até sob o rodapé e alinhar o PNG de Onde atuamos
+- [x] Reduzir o LinkedIn para 65%, afastar do copyright e aplicar texto 11px light
+- [x] Conferir os ajustes na página
 
 - [x] Aplicar os novos PNGs compostos mantendo proporções, com redução no celular e tamanho mantido no tablet
 - [x] Conferir as novas imagens no computador, tablet e celular

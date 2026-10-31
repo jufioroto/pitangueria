@@ -184,9 +184,7 @@ body { font-family: var(--font-sans); }
 @media (max-width: 767px) {
   .service-panel { min-height: 65vw; }
   .people-panel { min-height: 95.24vw; }
-  .service-art { top: -4.5%; bottom: auto; }
-  .people-section { overflow: clip; }
-  .people-art { left: 0; width: 100%; min-width: 0; height: auto; transform: none; }
+  .people-art { top: auto; bottom: -40px; left: 0; width: 100%; min-width: 0; height: auto; transform: none; }
 }
 @media (max-width: 479px) {
   .about-layout { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
