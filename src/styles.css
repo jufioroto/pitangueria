@@ -186,6 +186,8 @@ body { font-family: var(--font-sans); }
   .service-panel { min-height: 65vw; }
   .people-panel { min-height: 95.24vw; }
   .people-art { width: 100%; min-width: 0; height: auto; }
+  .people-title br { display: none; }
+  .people-title { font-size: 6.2vw; white-space: nowrap; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   .people-panel { padding-inline: 48px; }

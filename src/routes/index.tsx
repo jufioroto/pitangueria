@@ -200,13 +200,11 @@ function Index() {
       {/* PESSOAS */}
       <section id="pessoas" className="people-section relative bg-cover bg-center" style={{ backgroundImage: `url(${pitangas.url})` }}>
         <div className="absolute inset-0 bg-brand-red/80" />
-        <div className="relative grid md:grid-cols-[34%_56%_10%]">
+        <div className="relative grid md:grid-cols-[31%_59%_10%]">
           <div className="relative flex items-center px-8 py-16 md:justify-end md:pr-[5vw]">
-            <h2 className="font-display text-3xl uppercase leading-tight text-primary-foreground md:text-[2.6vw]">
-              <span className="font-semibold">Quem</span>
-              <br />
-              <span className="font-semibold">cria</span> no
-              <br />
+<h2 className="people-title font-display text-3xl uppercase leading-tight text-primary-foreground md:text-[2.6vw]">
+              <span className="font-semibold">Quem</span> <br />
+              <span className="font-semibold">cria</span> no <br />
               Pitangueria
             </h2>
           </div>
