@@ -260,13 +260,14 @@ function Index() {
                   Vitor <span className="font-bold">Balan</span>
                 </h3>
                 <p className="mt-4 text-[13px] font-light leading-snug">
-                  Relações-públicas formado pela Cásper Líbero, com especialização em ESG pelo Senac,
-                  formação no curso “Objetivos de Desenvolvimento Sustentável (ODS) e alterações
-                  climáticas” da Fundação das Nações Unidas (ONU) e certificações da GRI e IFRS
-                  Foundation. Atua há quase 15 anos em comunicação corporativa com ênfase em
-                  sustentabilidade. Entre as marcas atendidas, destacam-se Raízen, Cosan, EDP Brasil,
-                  Lojas Renner, Dexco, Movida, Fundação Bradesco, Embraer, Telefônica Vivo, Arteris,
-                  Cargill e outras.
+                  Vitor Balan trabalha há mais de uma década com comunicação corporativa e produção
+                  de conteúdo. Formado em Relações Públicas pela Faculdade Cásper Líbero, desenvolveu
+                  projetos para empresas e instituições como Raízen, Warner, Grupo Renault,
+                  Kimberly-Clark, Embraer, Fundação Bradesco, Lojas Renner e Telefônica Vivo, entre
+                  outras. Seu trabalho envolve escuta, apuração e sensibilidade editorial para
+                  transformar assuntos complexos em narrativas acessíveis e relevantes. A atenção
+                  às palavras e ao contexto de cada cliente orienta seu olhar para projetos que
+                  ajudam empresas a contar suas histórias e dialogar com diferentes públicos.
                 </p>
               </div>
               <img src={vitor.url} alt="Vitor Balan" className="h-28 w-28 shrink-0 rounded-full object-cover grayscale" />
