@@ -244,9 +244,7 @@ function Index() {
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <img src={fruta.url} alt="Pitangueria" className="h-12 w-auto object-contain" />
             <p className="text-xs tracking-[0.15em] text-primary-foreground/80">
-              <a href="mailto:jufioroto@pitangueria.com.br" className="hover:text-primary-foreground">jufioroto@pitangueria.com.br</a>
-              <span className="mx-2">|</span>
-              <a href="mailto:vitor@pitangueria.com.br" className="hover:text-primary-foreground">vitor@pitangueria.com.br</a>
+              <a href="mailto:contato@pitangueria.com.br" className="hover:text-primary-foreground">contato@pitangueria.com.br</a>
             </p>
           </div>
           <div className="flex items-center gap-8">
