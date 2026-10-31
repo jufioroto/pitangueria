@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Substituir a apresentação de Vitor pelo novo texto enviado
+- [x] Substituir a apresentação de Vitor pelo novo texto enviado
 
 - [x] Reduzir a imagem de abertura sem distorcer e conferir as laterais
 - [x] Adicionar menu hambúrguer no celular
