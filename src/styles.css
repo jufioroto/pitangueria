@@ -166,8 +166,8 @@ body { font-family: var(--font-sans); }
 .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
 .flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .flip-back { transform: rotateY(180deg); }
-.opening-panel { overflow: clip; background-size: cover; background-position: center; }
-.opening-art { display: block; width: 92%; height: auto; margin-inline: auto; }
+.opening-panel { overflow: clip; }
+.opening-art { display: block; width: 100%; height: auto; margin-inline: auto; }
 .cards-section { padding-block: 72px; }
 .vitor-copy { padding-left: 20px; }
 .service-panel { position: relative; min-height: 35.69vw; isolation: isolate; clip-path: inset(-40px 0 0); }
@@ -181,7 +181,7 @@ body { font-family: var(--font-sans); }
 .about-layout { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 28px; align-items: start; }
 .about-fruit { width: 96px; height: auto; margin-top: 4px; filter: drop-shadow(7px 12px 7px var(--fruit-shadow)); }
 @media (min-width: 640px) and (max-width: 1023px) {
-  .opening-art { width: 942.08px; max-width: none; margin-left: calc((100% - 942.08px) / 2); }
+  .opening-art { width: 1024px; max-width: none; margin-left: calc((100% - 1024px) / 2); }
   .service-panel { min-height: 365.46px; }
   .service-art { width: max(100%, 512px); max-width: none; }
 }

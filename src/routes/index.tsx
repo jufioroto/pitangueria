@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import linkedin from "@/assets/linkedin.png.asset.json";
 import frutaRecortada from "@/assets/fruta-recortada.png.asset.json";
-import aberturaPainel from "@/assets/abertura-painel.png.asset.json";
+import aberturaMenor from "@/assets/abertura-menor.png";
 import atuacaoPainel from "@/assets/atuacao-painel.png.asset.json";
 import pessoasPainel from "@/assets/pessoas-painel.png.asset.json";
 import pitangas from "@/assets/pitangas.jpg.asset.json";
@@ -26,10 +26,6 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Design, estratégia e malemolência criativa." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      ...(aberturaPainel.url.startsWith("https://") ? [
-        { property: "og:image", content: aberturaPainel.url },
-        { name: "twitter:image", content: aberturaPainel.url },
-      ] : []),
     ],
   }),
   component: Index,
@@ -168,8 +164,8 @@ function Index() {
           </nav>
         )}
       </header>
-      <section className="opening-panel relative w-full" style={{ backgroundImage: `url(${pitangas.url})` }}>
-        <img src={aberturaPainel.url} alt="" className="opening-art" fetchPriority="high" />
+      <section className="opening-panel relative w-full">
+        <img src={aberturaMenor} alt="" className="opening-art" fetchPriority="high" />
         <h1 className="sr-only">Design, estratégia e malemolência criativa</h1>
       </section>
 

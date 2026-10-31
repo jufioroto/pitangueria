@@ -5,4 +5,4 @@
 - Anchor service artwork to the panel bottom and layer the footer above overflowing people artwork so the supplied panels meet adjacent sections without gaps.
 - Keep people artwork anchored to the panel's top-left; enlargement must not shift its left edge into the heading or move its top below the biographies.
 - Keep mobile navigation in the fixed header with an accessible toggle; section selection and Escape close the menu.
-- Fill the opening panel's exposed sides with the supplied fruit photography rather than altering the composite artwork.
+- Use the reduced opening composite with AI-extended sides; preserve the original central artwork and transparency when editing its margins.
