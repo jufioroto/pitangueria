@@ -5,4 +5,4 @@
 - Anchor service artwork to the panel bottom and layer the footer above overflowing people artwork so the supplied panels meet adjacent sections without gaps.
 - Keep people artwork anchored to the panel's top-left; enlargement must not shift its left edge into the heading or move its top below the biographies.
 - Keep mobile navigation in the fixed header with an accessible toggle; section selection and Escape close the menu.
-- Use the reduced opening composite with AI-extended sides; preserve the original central artwork and transparency when editing its margins.
+- Use the reduced opening composite with AI-extended sides; preserve the original central artwork and transparency when editing its margins.- Images used by the site are real files in src/assets (not .asset.json pointers), because the site is also deployed to external hosting (KingHost) where Lovable's asset URLs don't resolve.
