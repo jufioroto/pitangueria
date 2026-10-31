@@ -173,8 +173,8 @@ body { font-family: var(--font-sans); }
 .people-panel { isolation: isolate; min-height: 53.33vw; }
 .people-panel { --people-panel-fill: oklch(0.562009 0.209031 30.2196); }
 .people-panel::before { content: ""; position: absolute; inset: 0 2.9% -40px; background: var(--people-panel-fill); z-index: -1; }
-.people-art { position: absolute; top: 0; left: 0; width: auto; max-width: none; min-width: 100%; height: calc(100% + 40px); pointer-events: none; z-index: 0; margin: 0; }
-.people-section { overflow: visible; }
+.people-art { position: absolute; top: 0; left: 0; width: auto; max-width: none; min-width: 100%; height: calc(100% + 40px); transform: scale(1.1); transform-origin: top left; pointer-events: none; z-index: 0; margin: 0; }
+.people-section { overflow-x: clip; overflow-y: visible; }
 .about-layout { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 28px; align-items: start; }
 .about-fruit { width: 96px; height: auto; margin-top: 4px; }
 @media (min-width: 640px) and (max-width: 1023px) {
