@@ -51,6 +51,10 @@ jobs:
             exit 1
           fi
 
+      # 5.0. Copia _shell.html para index.html (servidores que esperam index.html)
+      - name: "Gerar index.html"
+        run: cp "${{ steps.locate-shell.outputs.deploy_dir }}/_shell.html" "${{ steps.locate-shell.outputs.deploy_dir }}/index.html"
+
       # 5.1. Gera .htaccess para hospedagens Apache (DirectoryIndex + SPA fallback)
       - name: "Gerar .htaccess para Apache"
         run: |
