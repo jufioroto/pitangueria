@@ -239,7 +239,7 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer id="contato" className="bg-brand-dark px-6 py-8 text-primary-foreground">
+      <footer id="contato" className="relative z-10 bg-brand-dark px-6 py-8 text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <img src={fruta.url} alt="Pitangueria" className="h-12 w-auto object-contain" />
@@ -249,7 +249,7 @@ function Index() {
               <a href="mailto:vitor@pitangueria.com.br" className="hover:text-primary-foreground">vitor@pitangueria.com.br</a>
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-8">
             <a
               href="https://www.linkedin.com/company/pitangueria"
               target="_blank"
@@ -257,10 +257,10 @@ function Index() {
               aria-label="LinkedIn do Pitangueria"
               className="text-primary-foreground transition-opacity hover:opacity-70"
             >
-              <img src={linkedin.url} alt="" className="h-7 w-7 object-contain" />
+              <img src={linkedin.url} alt="" className="h-[18.2px] w-[18.2px] object-contain" />
             </a>
-            <p className="font-display text-xs uppercase">
-              <span className="font-bold">© 2026</span> Estúdio Pitangueria
+            <p className="font-display text-[11px] font-light uppercase">
+              <span>© 2026</span> Estúdio Pitangueria
             </p>
           </div>
         </div>
