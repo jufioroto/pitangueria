@@ -1,6 +1,6 @@
 import unittest
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 
 class CardInteractionsTest(unittest.TestCase):
@@ -20,14 +20,14 @@ class CardInteractionsTest(unittest.TestCase):
         for index in range(3):
             card = cards.nth(index)
             card.hover()
-            self.assertEqual(card.get_attribute("aria-pressed"), "true")
+            expect(card).to_have_attribute("aria-pressed", "true")
             card.click()
-            self.assertEqual(card.get_attribute("aria-pressed"), "true")
+            expect(card).to_have_attribute("aria-pressed", "true")
             page.mouse.move(0, 0)
             page.wait_for_function(
                 "el => el.getAttribute('aria-pressed') === 'false'", arg=card.element_handle()
             )
-            self.assertEqual(card.get_attribute("aria-pressed"), "false")
+            expect(card).to_have_attribute("aria-pressed", "false")
 
     def test_touch_toggles_the_card(self):
         page = self.browser.new_page(
@@ -36,9 +36,9 @@ class CardInteractionsTest(unittest.TestCase):
         page.goto("http://localhost:8080", wait_until="networkidle")
         card = page.locator(".flip").first
         card.tap()
-        self.assertEqual(card.get_attribute("aria-pressed"), "true")
+        expect(card).to_have_attribute("aria-pressed", "true")
         card.tap()
-        self.assertEqual(card.get_attribute("aria-pressed"), "false")
+        expect(card).to_have_attribute("aria-pressed", "false")
 
     def test_keyboard_remains_available(self):
         page = self.browser.new_page(viewport={"width": 1280, "height": 1800})
@@ -46,9 +46,9 @@ class CardInteractionsTest(unittest.TestCase):
         card = page.locator(".flip").first
         card.focus()
         page.keyboard.press("Enter")
-        self.assertEqual(card.get_attribute("aria-pressed"), "true")
+        expect(card).to_have_attribute("aria-pressed", "true")
         page.keyboard.press("Tab")
-        self.assertEqual(card.get_attribute("aria-pressed"), "false")
+        expect(card).to_have_attribute("aria-pressed", "false")
 
 
 if __name__ == "__main__":
