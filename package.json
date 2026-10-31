@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && node -e \"const fs=require('fs');for(const d of ['dist/client','dist']){if(fs.existsSync(d+'/_shell.html')){fs.copyFileSync(d+'/_shell.html',d+'/index.html');break}}\"",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
